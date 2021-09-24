@@ -46,11 +46,30 @@ header{
     & ul{
         list-style: none;
         display: flex;
+        padding: 0;
         & li{
-            padding: 0 1rem 0;
+            padding: 2.5rem 1rem;
+            border-bottom: 2px solid transparent;
+
+
+            &:active{
+                border-bottom: 2px solid $logoColor;
+                
+            }
             & a{
                 text-decoration: none;
                 color: $colorContent;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1rem;
+                font-family: $navFont;
+
+                &:hover{
+                    color: $logoColor;
+                }
+                &:active{
+                    color: $logoColor
+                }
             }
         }
     }
