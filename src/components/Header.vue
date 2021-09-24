@@ -6,24 +6,74 @@
 
       <nav id="nav-h">
           <ul>
-              <li><a href="#">Characters</a></li>
-              <li><a href="#">Comics</a></li>
-              <li><a href="#">Movies</a></li>
-              <li><a href="#">Tv</a></li>
-              <li><a href="#">Games</a></li>
-              <li><a href="#">Collectibles</a></li>
-              <li><a href="#">Videos</a></li>
-              <li><a href="#">Fans</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Shops</a></li>
+              <li v-for="(element, index) in links" :key="index" :class="{ active : element.current}"> 
+                  <a> {{ element.text }} </a>
+              </li>
           </ul>
       </nav>
+      
   </header>
 </template>
 
 <script>
 export default {
-
+    name: 'Header',
+    data: function () {
+    return {
+      links:[
+        {
+            text: "Characters",
+            url:'#characters',
+            current: true,
+        },
+        {
+            text: "Comics",
+            url:'#comics',
+            current: false,
+        },
+                {
+            text: "Movies",
+            url:'#movies',
+            current: false,
+        },
+        {
+            text: "Tv",
+            url:'#tv',
+            current: false,
+        },
+                {
+            text: "Games",
+            url:'#games',
+            current: false,
+        },
+        {
+            text: "Collectibles",
+            url:'#collectibles',
+            current: false,
+        },
+                {
+            text: "Videos",
+            url:'#videos',
+            current: false,
+        },
+        {
+            text: "Fans",
+            url:'#fans',
+            current: false,
+        },
+                {
+            text: "News",
+            url:'#news',
+            current: false,
+        },
+        {
+            text: "Shops",
+            url:'#shops',
+            current: false,
+        },
+      ]
+    }
+  },
 }
 </script>
 
@@ -35,6 +85,7 @@ header{
     justify-content: space-evenly;
     align-items: center;
 }
+
 #img-logo{
     width: 60px;
     & img{
@@ -51,11 +102,12 @@ header{
             padding: 2.5rem 1rem;
             border-bottom: 2px solid transparent;
 
-
-            &:active{
+            &.active{
                 border-bottom: 2px solid $logoColor;
                 
             }
+
+
             & a{
                 text-decoration: none;
                 color: $colorContent;
@@ -66,9 +118,6 @@ header{
 
                 &:hover{
                     color: $logoColor;
-                }
-                &:active{
-                    color: $logoColor
                 }
             }
         }
