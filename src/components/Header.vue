@@ -84,6 +84,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 3;
 }
 
 #img-logo{
@@ -100,10 +101,10 @@ header{
         padding: 0;
         & li{
             padding: 2.5rem 1rem;
-            border-bottom: 2px solid transparent;
+            border-bottom: 4px solid transparent;
 
             &.active{
-                border-bottom: 2px solid $logoColor;
+                border-bottom: 4px solid $logoColor;
                 
             }
 
@@ -115,6 +116,7 @@ header{
                 font-weight: 600;
                 font-size: 1rem;
                 font-family: $navFont;
+                z-index: 5;
 
                 &:hover{
                     color: $logoColor;
