@@ -84,6 +84,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
     z-index: 3;
 }
 

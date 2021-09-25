@@ -2,6 +2,7 @@
     <footer>
         <div id="main-footer">
             <div id="navs-f">
+                
                 <div class="columns">
                     <h4>Dc Comics</h4>
                     <ul>
@@ -221,6 +222,17 @@ footer{
 .btn-footer{
     text-align: center;
     display: inline-block;
+    
+    & button{
+        background-color: $footerBottom;
+        padding: 0.7rem;
+        color: white;
+        border: 2px solid $logoColor;
+        font-weight: 600;
+        &:hover{
+            background-color: $logoColor;
+        }
+    }
 }
 .social{
     display: inline-block;
