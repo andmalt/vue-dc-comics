@@ -7,7 +7,7 @@
                     <h4>Dc Comics</h4>
                     <ul>
                         <li v-for="(element, index) in linkFooter" :key="index"> 
-                            <a> {{ element.text }} </a>
+                            <a :href="element.url"> {{ element.text }} </a>
                         </li>
                     </ul>
                     
@@ -15,7 +15,7 @@
                     <h4>Shops</h4>
                     <ul>
                         <li v-for="(element, index) in linkShop" :key="index"> 
-                            <a> {{ element.text }} </a>
+                            <a :href="element.url"> {{ element.text }} </a>
                         </li>
                     </ul>
                     
@@ -26,7 +26,7 @@
                     <h4>Dc</h4>
                     <ul>
                         <li v-for="(element, index) in linkDc" :key="index"> 
-                            <a> {{ element.text }} </a>
+                            <a :href="element.url"> {{ element.text }} </a>
                         </li>
                     </ul>
                     
@@ -36,7 +36,7 @@
                     <h4>Sites</h4>
                     <ul>
                         <li v-for="(element, index) in linkSites" :key="index"> 
-                            <a> {{ element.text }} </a>
+                            <a :href="element.url"> {{ element.text }} </a>
                         </li>
                     </ul>
                 </div>
