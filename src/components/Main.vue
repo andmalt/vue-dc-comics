@@ -1,6 +1,6 @@
 <template>
     <main>
-        <BoxDc/>
+        <BoxDc v-for="(element, index ) in DcCard" :key="index" :series="element.series" :thumb="element.thumb" />
     </main>
 </template>
 
@@ -9,6 +9,7 @@ import DcCard from '../data/dc-comics.json';
 import BoxDc from './Box.vue';
 
 export default {
+    name:'Main',
     components: {
         BoxDc,
     },
@@ -28,7 +29,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    padding: 3rem 10rem;
     background-color: $colorContent;
 }
 </style>
