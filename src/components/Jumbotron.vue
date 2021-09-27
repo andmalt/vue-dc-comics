@@ -1,8 +1,5 @@
 <template>
   <section id="jumbotron">
-      <div>
-          <h1>Jumbotron</h1>
-      </div>
   </section>
 </template>
 
@@ -14,9 +11,10 @@ export default {
 
 <style lang='scss'>
 #jumbotron{
-    background-color: gray;
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-size: cover;
     width: 100%;
-    height: 300px;
+    height: 400px;
     text-align: center;
     & h1{
         padding: 3rem;
